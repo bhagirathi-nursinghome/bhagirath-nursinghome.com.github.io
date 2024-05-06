@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Iframe Content</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  h1 {
+    margin-top: 20px;
+  }
+  .button-container {
+    margin-top: 20px;
+  }
+  .button-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  .button-container button:hover {
+    background-color: #45a049;
+  }
+  iframe {
+    border: none;
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Bhagirathi</h1>
+  <div class="button-container">
+    <button onclick="changeIframeSrc('https://docs.google.com/forms/d/e/1FAIpQLSdnuPtlhsWuadoHnQk5sioz_tfmGtz4jd-hr89KzC2Emu4Mcg/viewform')">Patient Entry</button>
+    <button onclick="changeIframeSrc('https://docs.google.com/forms/d/e/1FAIpQLSdrvAJyw8IjRAKq64hQgoh5CycGaOauwmjs1-UJKD3rszSu1Q/viewform')">Expense</button>
+    <button onclick="changeIframeSrc('https://docs.google.com/forms/d/e/1FAIpQLSf8Py5FL6mQYGnuK6fv5nQPoLQEJd5OVYhd6lNMma__J1mn6Q/viewform')">Cash input output</button>
+    <button onclick="changeIframeSrc('page4.html')">Report</button>
+  </div>
+  <iframe id="contentFrame" src="" frameborder="0"></iframe>
+</div>
+
+<script>
+  function changeIframeSrc(src) {
+    document.getElementById('contentFrame').src = src;
+  }
+</script>
+</body>
+</html>
